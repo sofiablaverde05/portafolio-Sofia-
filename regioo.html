@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Regioo · Diseño UX/UI · Sofia</title>
+  <meta name="description" content="Regioo es una aplicación móvil de estilo personal que permite a los hombres organizar sus prendas en un ropero digital, crear outfits y recibir recomendaci">
+  <meta name="theme-color" content="#23499f">
+  <meta property="og:title" content="Regioo · Diseño UX/UI · Sofia">
+  <meta property="og:description" content="Regioo es una aplicación móvil de estilo personal que permite a los hombres organizar sus prendas en un ropero digital, crear outfits y recibir recomendaci">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="preload" href="assets/fonts/caacupe-one-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/poppins-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/styles.css">
+  <script>(function(d){d.classList.add('js');try{history.scrollRestoration='manual'}catch(e){}try{if(sessionStorage.getItem('curtain')){d.classList.add('curtain-in');sessionStorage.removeItem('curtain')}}catch(e){}})(document.documentElement);</script>
+</head>
+<body>
+  <a class="skip" href="#contenido-principal">Saltar al contenido</a>
+
+  <div class="curtain" aria-hidden="true"><img src="assets/img/sofi-crema.png" alt="" width="372" height="197"></div>
+  <div class="cursor" aria-hidden="true"><div class="cursor__ring"><span class="cursor__label"></span></div><div class="cursor__dot"></div></div>
+
+  <header class="top">
+    <a class="top__logo" href="index.html" aria-label="Inicio"><img src="assets/img/sofi-azul.png" alt="sofi" width="372" height="197"></a>
+    <nav class="top__nav" aria-label="Principal"><a href="uxui.html" aria-current="page">Diseño UX/UI</a><a href="fotografia.html">Fotografía deportiva</a><a href="motion.html">Motion Graphics</a><a href="inmersiva.html">Experiencia Inmersiva</a><a href="index.html#contacto">Contacto</a></nav>
+    <button class="top__menu" aria-expanded="false" aria-controls="menu"><span>Menú</span><i></i></button>
+  </header>
+  <nav class="menu" id="menu" aria-label="Menú principal">
+    <ul class="menu__list">
+        <li><a href="index.html" style="--i:0"><small>00</small>Inicio</a></li>
+        <li><a href="uxui.html" style="--i:1" aria-current="page"><small>01</small>Diseño UX/UI</a></li>
+        <li><a href="fotografia.html" style="--i:2"><small>02</small>Fotografía deportiva</a></li>
+        <li><a href="motion.html" style="--i:3"><small>03</small>Motion Graphics</a></li>
+        <li><a href="inmersiva.html" style="--i:4"><small>04</small>Experiencia Inmersiva</a></li>
+        <li><a href="index.html#contacto" style="--i:5"><small>05</small>Contacto</a></li>
+        </ul>
+    <div class="menu__foot"><a href="mailto:sofiablaverde05@gmail.com">sofiablaverde05@gmail.com</a><span>Bogotá, Colombia</span></div>
+  </nav>
+
+  <main id="contenido-principal" style="--accent:#097987">
+    <header class="phero sec--cream">
+      <div class="container">
+        <a class="crumb" href="uxui.html" data-cursor="Volver">← Diseño UX/UI</a>
+        <h1 class="pill" style="--accent:#097987">Regioo</h1>
+        <div class="phero__grid">
+          <p class="lead" data-reveal>Regioo es una aplicación móvil de estilo personal que permite a los hombres organizar sus prendas en un ropero digital, crear outfits y recibir recomendaciones según sus gustos, estilo, ocasión y clima, ayudándolos a construir una identidad propia al vestir.</p>
+          <div data-reveal><dl class="meta"><dt>Tipo</dt><dd>Aplicación móvil</dd><dt>Herramientas</dt><dd><div class="tools" style="--accent:#097987"><i class="ico i-figma" role="img" aria-label="figma"></i><i class="ico i-code" role="img" aria-label="code"></i></div></dd></dl></div>
+        </div>
+      </div>
+    </header>
+    <section class="tabs sec--cream" data-tabs style="--accent:#097987">
+      <div class="container">
+        <div class="tabs__list" role="tablist" aria-label="Proceso del proyecto"><button class="tab" role="tab" id="t-arquitectura" aria-controls="p-arquitectura" data-hash="arquitectura" aria-selected="false" tabindex="-1"><small>01</small>Mapa de arquitectura</button><button class="tab" role="tab" id="t-wireframes" aria-controls="p-wireframes" data-hash="wireframes" aria-selected="false" tabindex="-1"><small>02</small>Wireframes</button><button class="tab" role="tab" id="t-sistema" aria-controls="p-sistema" data-hash="sistema" aria-selected="false" tabindex="-1"><small>03</small>Sistema de diseño</button><button class="tab" role="tab" id="t-final" aria-controls="p-final" data-hash="final" data-default aria-selected="false" tabindex="-1"><small>04</small>Producto final</button></div>
+        <div class="tabpanel" role="tabpanel" id="p-arquitectura" aria-labelledby="t-arquitectura" hidden><div class="panel__intro"><h2>Mapa de arquitectura</h2><p>Cómo se organiza la información y las rutas de la app.</p></div>
+          <div class="todo-box"><b>Aquí va: el mapa de arquitectura de Regioo</b><span>Sube la imagen a <code>assets/proceso/regioo/</code> y pega este bloque en <code>regioo.html</code> (ver README).</span></div>
+          <!-- <div class="shots"><figure class="shot shot--wide"><img src="assets/proceso/regioo/ARCHIVO.webp" alt="DESCRIPCIÓN" width="1600" height="900" loading="lazy"><figcaption>Descripción breve</figcaption></figure></div> -->
+        </div>
+        <div class="tabpanel" role="tabpanel" id="p-wireframes" aria-labelledby="t-wireframes" hidden><div class="panel__intro"><h2>Wireframes</h2><p>Primeros esquemas de pantallas, antes del diseño visual.</p></div>
+          <div class="todo-box"><b>Aquí va: los wireframes de Regioo</b><span>Sube la imagen a <code>assets/proceso/regioo/</code> y pega este bloque en <code>regioo.html</code> (ver README).</span></div>
+          <!-- <div class="shots"><figure class="shot shot--wide"><img src="assets/proceso/regioo/ARCHIVO.webp" alt="DESCRIPCIÓN" width="1600" height="900" loading="lazy"><figcaption>Descripción breve</figcaption></figure></div> -->
+        </div>
+        <div class="tabpanel" role="tabpanel" id="p-sistema" aria-labelledby="t-sistema" hidden><div class="panel__intro"><h2>Sistema de diseño</h2><p>Color, tipografía, componentes y reglas del producto.</p></div>
+          <div class="todo-box"><b>Aquí va: el sistema de diseño de Regioo</b><span>Sube la imagen a <code>assets/proceso/regioo/</code> y pega este bloque en <code>regioo.html</code> (ver README).</span></div>
+          <!-- <div class="shots"><figure class="shot shot--wide"><img src="assets/proceso/regioo/ARCHIVO.webp" alt="DESCRIPCIÓN" width="1600" height="900" loading="lazy"><figcaption>Descripción breve</figcaption></figure></div> -->
+        </div>
+        <div class="tabpanel" role="tabpanel" id="p-final" aria-labelledby="t-final" hidden><div class="panel__intro"><h2>Producto final</h2><p>Prototipo interactivo y pantallas finales.</p></div>
+          <div class="embed-wrap">
+            <div class="embed embed--tall" id="emb-regioo">
+              <div class="embed__ph">
+                <img src="assets/img/regio-phones.webp" alt="" width="1620" height="750">
+                <b>Prototipo Regioo</b>
+                <p>App móvil: ropero digital, outfits y recomendaciones. Úsala aquí mismo.</p>
+                <button class="btn btn--cream" data-embed="https://www.figma.com/embed?embed_host=share&amp;url=https%3A%2F%2Fwww.figma.com%2Fproto%2FUvb4D0xiLBQ5HKZU6VnAQQ%2FRegio%3Fnode-id%3D375-988%26t%3DPcUnItBQALy2nxgP-1%26scaling%3Dscale-down%26content-scaling%3Dfixed%26page-id%3D64%253A4%26starting-point-node-id%3D69%253A251" data-title="Prototipo Regioo" data-cursor="Abrir">Abrir prototipo interactivo <span aria-hidden="true">→</span></button>
+              </div>
+            </div>
+            <div class="embed__bar">
+              <span class="note" style="margin:0">Si el prototipo no carga, ábrelo directamente en Figma.</span>
+              <span class="btn-row"><button class="btn btn--ghost" data-fs="emb-regioo">Pantalla completa</button><a class="btn" href="https://www.figma.com/proto/Uvb4D0xiLBQ5HKZU6VnAQQ/Regio?node-id=375-988&amp;t=PcUnItBQALy2nxgP-1&amp;scaling=scale-down&amp;content-scaling=fixed&amp;page-id=64%3A4&amp;starting-point-node-id=69%3A251" target="_blank" rel="noopener">Abrir en Figma <span aria-hidden="true">↗</span></a></span>
+            </div>
+          </div>
+          <div class="stage" data-reveal><img class="fade-edges" src="assets/img/regio-phones.webp" alt="Pantallas de la app móvil Regioo: registro, ropero digital, bitácora de tableros e inspiración de outfits" width="1620" height="750" loading="lazy"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="more sec--cream">
+      <div class="container">
+        <h2 class="h-md" data-reveal>Sigue explorando</h2>
+        <div class="more__grid" data-reveal><a class="mcard" href="421co.html" style="--bg:var(--navy)" data-cursor="Ir"><small>Siguiente proyecto</small><b>421co<span aria-hidden="true">↗</span></b></a><a class="mcard" href="atelier.html" style="--bg:var(--slate)" data-cursor="Ir"><small>Siguiente proyecto</small><b>Atelier<span aria-hidden="true">↗</span></b></a><a class="mcard" href="fotografia.html" style="--bg:var(--blue)" data-cursor="Ir"><small>Sección</small><b>Fotografía deportiva<span aria-hidden="true">↗</span></b></a></div>
+      </div>
+    </section>
+    <section class="sec sec--blue wave-top contact contact--compact" id="contacto">
+      <div class="container">
+        <h2 class="h-xl" data-reveal>Contacto</h2>
+        <p class="lead" data-reveal>Creemos algo que se pueda ver, sentir y recordar.</p>
+        <a class="contact__mail" href="mailto:sofiablaverde05@gmail.com" data-cursor="Escribir" data-reveal>sofiablaverde05@gmail.com</a>
+        <ul class="contact__meta" data-reveal>
+          <li><a href="tel:+573025474966">+57 302 547 4966</a></li>
+          <li>Bogotá, Colombia</li>
+        </ul>
+        <div class="contact__foot">
+          <img src="assets/img/sofi-crema.png" alt="sofi" width="372" height="197" loading="lazy">
+          <p>© <span data-year>2026</span> Sofia · Diseño digital</p>
+          <a class="top-link" href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false" data-cursor="Subir">Volver arriba ↑</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="lb" id="lightbox" role="dialog" aria-modal="true" aria-label="Visor" hidden>
+    <span class="lb__count" aria-hidden="true"></span>
+    <button class="lb__btn lb__close" aria-label="Cerrar" data-cursor="Cerrar">✕</button>
+    <button class="lb__btn lb__prev" aria-label="Anterior" data-cursor="Anterior">←</button>
+    <figure class="lb__fig"><img class="lb__img" alt=""><video class="lb__video" controls playsinline loop hidden></video><figcaption class="lb__cap"></figcaption></figure>
+    <button class="lb__btn lb__next" aria-label="Siguiente" data-cursor="Siguiente">→</button>
+  </div>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

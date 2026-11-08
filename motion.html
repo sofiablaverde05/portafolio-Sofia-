@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Motion Graphics · Sofia</title>
+  <meta name="description" content="Piezas de motion graphics: afiches animados, logotipos y tipografía en movimiento.">
+  <meta name="theme-color" content="#23499f">
+  <meta property="og:title" content="Motion Graphics · Sofia">
+  <meta property="og:description" content="Piezas de motion graphics: afiches animados, logotipos y tipografía en movimiento.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="preload" href="assets/fonts/caacupe-one-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/poppins-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/styles.css">
+  <script>(function(d){d.classList.add('js');try{history.scrollRestoration='manual'}catch(e){}try{if(sessionStorage.getItem('curtain')){d.classList.add('curtain-in');sessionStorage.removeItem('curtain')}}catch(e){}})(document.documentElement);</script>
+</head>
+<body>
+  <a class="skip" href="#contenido-principal">Saltar al contenido</a>
+
+  <div class="curtain" aria-hidden="true"><img src="assets/img/sofi-crema.png" alt="" width="372" height="197"></div>
+  <div class="cursor" aria-hidden="true"><div class="cursor__ring"><span class="cursor__label"></span></div><div class="cursor__dot"></div></div>
+
+  <header class="top">
+    <a class="top__logo" href="index.html" aria-label="Inicio"><img src="assets/img/sofi-azul.png" alt="sofi" width="372" height="197"></a>
+    <nav class="top__nav" aria-label="Principal"><a href="uxui.html">Diseño UX/UI</a><a href="fotografia.html">Fotografía deportiva</a><a href="motion.html" aria-current="page">Motion Graphics</a><a href="inmersiva.html">Experiencia Inmersiva</a><a href="index.html#contacto">Contacto</a></nav>
+    <button class="top__menu" aria-expanded="false" aria-controls="menu"><span>Menú</span><i></i></button>
+  </header>
+  <nav class="menu" id="menu" aria-label="Menú principal">
+    <ul class="menu__list">
+        <li><a href="index.html" style="--i:0"><small>00</small>Inicio</a></li>
+        <li><a href="uxui.html" style="--i:1"><small>01</small>Diseño UX/UI</a></li>
+        <li><a href="fotografia.html" style="--i:2"><small>02</small>Fotografía deportiva</a></li>
+        <li><a href="motion.html" style="--i:3" aria-current="page"><small>03</small>Motion Graphics</a></li>
+        <li><a href="inmersiva.html" style="--i:4"><small>04</small>Experiencia Inmersiva</a></li>
+        <li><a href="index.html#contacto" style="--i:5"><small>05</small>Contacto</a></li>
+        </ul>
+    <div class="menu__foot"><a href="mailto:sofiablaverde05@gmail.com">sofiablaverde05@gmail.com</a><span>Bogotá, Colombia</span></div>
+  </nav>
+
+  <main id="contenido-principal">
+    <figure class="shero shero--full" aria-label="Motion Graphics"><div class="shero__box" style="--accent:var(--teal)">
+      <video src="assets/motion/seccion-motion.mp4" muted loop playsinline autoplay preload="auto" aria-hidden="true"></video>
+      <div class="shero__ph"><span class="eyebrow">Motion de la sección</span><small>Pendiente: sube tu animación como <code>assets/motion/seccion-motion.mp4</code> (ocupará toda la pantalla)</small></div>
+    </div></figure>
+    <section class="sec--cream motion-grid"><div class="container"><div class="masonry">
+      <figure class="tile has-video" data-reveal><button class="zoom mt" data-lightbox="motion" data-full="assets/img/mg-renegados.webp" data-video="assets/motion/demo-renegados.mp4" data-title="Renegados" data-desc="Pieza de motion graphics: afiche del libro «Renegados», de Marissa Meyer." data-cursor="Ver" aria-label="Ver Renegados">
+        <img class="poster" src="assets/img/mg-renegados.webp" alt="Renegados: Pieza de motion graphics: afiche del libro «Renegados», de Marissa Meyer." width="435" height="652" loading="lazy"><video data-src="assets/motion/demo-renegados.mp4" muted loop playsinline preload="none" aria-hidden="true"></video>
+        <span class="mt__play" aria-hidden="true">▶</span><span class="mt__cap"><b>Renegados</b>Pieza de motion graphics: afiche del libro «Renegados», de Marissa Meyer.</span></button></figure>
+      <figure class="tile" data-reveal><button class="zoom mt" data-lightbox="motion" data-full="assets/img/mg-ojos.webp" data-title="Ojos" data-desc="Pieza de motion graphics sobre fondo blanco con dos ojos abiertos." data-cursor="Ver" aria-label="Ver Ojos">
+        <img class="poster" src="assets/img/mg-ojos.webp" alt="Ojos: Pieza de motion graphics sobre fondo blanco con dos ojos abiertos." width="463" height="259" loading="lazy">
+        <span class="mt__play" aria-hidden="true">▶</span><span class="mt__cap"><b>Ojos</b>Pieza de motion graphics sobre fondo blanco con dos ojos abiertos.</span></button></figure>
+      <figure class="tile has-video" data-reveal><button class="zoom mt" data-lightbox="motion" data-full="assets/img/mg-dvsport.webp" data-video="assets/motion/demo-dvsport.mp4" data-title="DVSPORT" data-desc="Logotipo animado de DVSPORT, con un búho y astas." data-cursor="Ver" aria-label="Ver DVSPORT">
+        <img class="poster" src="assets/img/mg-dvsport.webp" alt="DVSPORT: Logotipo animado de DVSPORT, con un búho y astas." width="386" height="259" loading="lazy"><video data-src="assets/motion/demo-dvsport.mp4" muted loop playsinline preload="none" aria-hidden="true"></video>
+        <span class="mt__play" aria-hidden="true">▶</span><span class="mt__cap"><b>DVSPORT</b>Logotipo animado de DVSPORT, con un búho y astas.</span></button></figure>
+      <figure class="tile" data-reveal><button class="zoom mt" data-lightbox="motion" data-full="assets/img/mg-banos.webp" data-title="Baños" data-desc="Pictograma animado de baños: dos figuras sobre fondo negro." data-cursor="Ver" aria-label="Ver Baños">
+        <img class="poster" src="assets/img/mg-banos.webp" alt="Baños: Pictograma animado de baños: dos figuras sobre fondo negro." width="274" height="269" loading="lazy">
+        <span class="mt__play" aria-hidden="true">▶</span><span class="mt__cap"><b>Baños</b>Pictograma animado de baños: dos figuras sobre fondo negro.</span></button></figure>
+      <figure class="tile" data-reveal><button class="zoom mt" data-lightbox="motion" data-full="assets/img/mg-darkside.webp" data-title="Darkside" data-desc="Tipografía animada «Darkside», en blanco y rojo sobre fondo negro." data-cursor="Ver" aria-label="Ver Darkside">
+        <img class="poster" src="assets/img/mg-darkside.webp" alt="Darkside: Tipografía animada «Darkside», en blanco y rojo sobre fondo negro." width="374" height="202" loading="lazy">
+        <span class="mt__play" aria-hidden="true">▶</span><span class="mt__cap"><b>Darkside</b>Tipografía animada «Darkside», en blanco y rojo sobre fondo negro.</span></button></figure>
+      <figure class="tile" data-reveal><button class="zoom mt" data-lightbox="motion" data-full="assets/img/mg-it.webp" data-title="It" data-desc="Afiche de «It», de Stephen King, con un globo y casas en blanco y negro." data-cursor="Ver" aria-label="Ver It">
+        <img class="poster" src="assets/img/mg-it.webp" alt="It: Afiche de «It», de Stephen King, con un globo y casas en blanco y negro." width="435" height="661" loading="lazy">
+        <span class="mt__play" aria-hidden="true">▶</span><span class="mt__cap"><b>It</b>Afiche de «It», de Stephen King, con un globo y casas en blanco y negro.</span></button></figure>
+    </div></div></section>
+
+    <section class="more sec--cream">
+      <div class="container">
+        <h2 class="h-md" data-reveal>Sigue explorando</h2>
+        <div class="more__grid" data-reveal><a class="mcard" href="uxui.html" style="--bg:var(--blue)" data-cursor="Ir"><small>Sección</small><b>Diseño UX/UI<span aria-hidden="true">↗</span></b></a><a class="mcard" href="fotografia.html" style="--bg:var(--navy)" data-cursor="Ir"><small>Sección</small><b>Fotografía deportiva<span aria-hidden="true">↗</span></b></a><a class="mcard" href="inmersiva.html" style="--bg:var(--slate)" data-cursor="Ir"><small>Sección</small><b>Experiencia Inmersiva<span aria-hidden="true">↗</span></b></a></div>
+      </div>
+    </section>
+    <section class="sec sec--blue wave-top contact contact--compact" id="contacto">
+      <div class="container">
+        <h2 class="h-xl" data-reveal>Contacto</h2>
+        <p class="lead" data-reveal>Creemos algo que se pueda ver, sentir y recordar.</p>
+        <a class="contact__mail" href="mailto:sofiablaverde05@gmail.com" data-cursor="Escribir" data-reveal>sofiablaverde05@gmail.com</a>
+        <ul class="contact__meta" data-reveal>
+          <li><a href="tel:+573025474966">+57 302 547 4966</a></li>
+          <li>Bogotá, Colombia</li>
+        </ul>
+        <div class="contact__foot">
+          <img src="assets/img/sofi-crema.png" alt="sofi" width="372" height="197" loading="lazy">
+          <p>© <span data-year>2026</span> Sofia · Diseño digital</p>
+          <a class="top-link" href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false" data-cursor="Subir">Volver arriba ↑</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="lb" id="lightbox" role="dialog" aria-modal="true" aria-label="Visor" hidden>
+    <span class="lb__count" aria-hidden="true"></span>
+    <button class="lb__btn lb__close" aria-label="Cerrar" data-cursor="Cerrar">✕</button>
+    <button class="lb__btn lb__prev" aria-label="Anterior" data-cursor="Anterior">←</button>
+    <figure class="lb__fig"><img class="lb__img" alt=""><video class="lb__video" controls playsinline loop hidden></video><figcaption class="lb__cap"></figcaption></figure>
+    <button class="lb__btn lb__next" aria-label="Siguiente" data-cursor="Siguiente">→</button>
+  </div>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

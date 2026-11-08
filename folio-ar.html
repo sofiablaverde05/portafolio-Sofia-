@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Folio · It · Experiencia Inmersiva · Sofia</title>
+  <meta name="description" content="Experiencia de realidad aumentada creada para Folio a partir de «It». Reconoce una imagen con la cámara y superpone contenido en 3D sobre ella.">
+  <meta name="theme-color" content="#23499f">
+  <meta property="og:title" content="Folio · It · Experiencia Inmersiva · Sofia">
+  <meta property="og:description" content="Experiencia de realidad aumentada creada para Folio a partir de «It». Reconoce una imagen con la cámara y superpone contenido en 3D sobre ella.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="preload" href="assets/fonts/caacupe-one-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/poppins-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/styles.css">
+  <script>(function(d){d.classList.add('js');try{history.scrollRestoration='manual'}catch(e){}try{if(sessionStorage.getItem('curtain')){d.classList.add('curtain-in');sessionStorage.removeItem('curtain')}}catch(e){}})(document.documentElement);</script>
+</head>
+<body>
+  <a class="skip" href="#contenido-principal">Saltar al contenido</a>
+
+  <div class="curtain" aria-hidden="true"><img src="assets/img/sofi-crema.png" alt="" width="372" height="197"></div>
+  <div class="cursor" aria-hidden="true"><div class="cursor__ring"><span class="cursor__label"></span></div><div class="cursor__dot"></div></div>
+
+  <header class="top">
+    <a class="top__logo" href="index.html" aria-label="Inicio"><img src="assets/img/sofi-azul.png" alt="sofi" width="372" height="197"></a>
+    <nav class="top__nav" aria-label="Principal"><a href="uxui.html">Diseño UX/UI</a><a href="fotografia.html">Fotografía deportiva</a><a href="motion.html">Motion Graphics</a><a href="inmersiva.html" aria-current="page">Experiencia Inmersiva</a><a href="index.html#contacto">Contacto</a></nav>
+    <button class="top__menu" aria-expanded="false" aria-controls="menu"><span>Menú</span><i></i></button>
+  </header>
+  <nav class="menu" id="menu" aria-label="Menú principal">
+    <ul class="menu__list">
+        <li><a href="index.html" style="--i:0"><small>00</small>Inicio</a></li>
+        <li><a href="uxui.html" style="--i:1"><small>01</small>Diseño UX/UI</a></li>
+        <li><a href="fotografia.html" style="--i:2"><small>02</small>Fotografía deportiva</a></li>
+        <li><a href="motion.html" style="--i:3"><small>03</small>Motion Graphics</a></li>
+        <li><a href="inmersiva.html" style="--i:4" aria-current="page"><small>04</small>Experiencia Inmersiva</a></li>
+        <li><a href="index.html#contacto" style="--i:5"><small>05</small>Contacto</a></li>
+        </ul>
+    <div class="menu__foot"><a href="mailto:sofiablaverde05@gmail.com">sofiablaverde05@gmail.com</a><span>Bogotá, Colombia</span></div>
+  </nav>
+
+  <main id="contenido-principal" style="--accent:#33356c">
+    <header class="phero sec--cream">
+      <div class="container">
+        <a class="crumb" href="inmersiva.html" data-cursor="Volver">← Experiencia Inmersiva</a>
+        <h1 class="pill" style="--accent:#33356c">Folio · It</h1>
+        <div class="phero__grid">
+          <p class="lead" data-reveal>Experiencia de realidad aumentada creada para Folio a partir de «It». Reconoce una imagen con la cámara y superpone contenido en 3D sobre ella.</p>
+          <div data-reveal><dl class="meta"><dt>Tipo</dt><dd>Realidad aumentada</dd><dt>Herramientas</dt><dd><div class="tools" style="--accent:#33356c"><i class="ico i-code" role="img" aria-label="code"></i><i class="ico i-layout" role="img" aria-label="layout"></i></div></dd></dl></div>
+        </div>
+      </div>
+    </header>
+    <section class="tabs sec--cream" data-tabs style="--accent:#33356c">
+      <div class="container">
+        <div class="tabs__list" role="tablist" aria-label="Proceso del proyecto"><button class="tab" role="tab" id="t-vivo" aria-controls="p-vivo" data-hash="vivo" data-default aria-selected="false" tabindex="-1"><small>01</small>En vivo</button><button class="tab" role="tab" id="t-video" aria-controls="p-video" data-hash="video" aria-selected="false" tabindex="-1"><small>02</small>Video</button><button class="tab" role="tab" id="t-visor-3d" aria-controls="p-visor-3d" data-hash="visor-3d" aria-selected="false" tabindex="-1"><small>03</small>Sin cámara</button></div>
+        <div class="tabpanel" role="tabpanel" id="p-vivo" aria-labelledby="t-vivo" hidden><div class="panel__intro"><h2>Pruébala aquí</h2><p>Experiencia interactiva dentro de la página.</p></div>
+          <div class="ar">
+            <div class="ar__frame" id="ar-frame">
+              <div class="embed__ph">
+                <img src="assets/img/mg-it.webp" alt="" width="435" height="661">
+                <b>Experiencia AR · It</b>
+                <p>Se abrirá aquí mismo y te pedirá permiso para usar la cámara.</p>
+                <button class="btn btn--cream" data-embed="https://folio-it.vercel.app/" data-title="Experiencia de realidad aumentada de It" data-allow="camera; microphone; fullscreen; xr-spatial-tracking; accelerometer; gyroscope" data-cursor="Iniciar">Iniciar experiencia <span aria-hidden="true">→</span></button>
+              </div>
+            </div>
+            <div class="ar__side">
+              <ol class="ar__steps">
+                <li><span><b>Inicia la experiencia</b><br>Pulsa el botón y acepta el permiso de la cámara.</span></li>
+                <li><span><b>Apunta a la imagen marcadora</b><br>La experiencia reconoce una imagen concreta: muéstrala en otra pantalla o impresa, o escanea el QR con tu teléfono.</span></li>
+                <li><span><b>Mira la realidad aumentada</b><br>Mueve el teléfono para ver el contenido sobre la imagen.</span></li>
+              </ol>
+              <div class="ar__marks">
+                <figure><img src="assets/img/qr-folio.png" alt="Código QR para abrir la experiencia AR en el teléfono" width="462" height="462" loading="lazy"><figcaption>Escanea con el teléfono</figcaption></figure>
+                <figure><img src="assets/img/marcador-it.webp" alt="Imagen marcadora: portada de It" width="709" height="1078" loading="lazy"><figcaption>Apunta la cámara aquí</figcaption></figure>
+              </div>
+              <p class="btn-row"><a class="btn btn--ghost" href="https://folio-it.vercel.app/" target="_blank" rel="noopener">Abrir en pestaña nueva <span aria-hidden="true">↗</span></a></p>
+              <p class="note">La cámara necesita permiso del navegador. En la mayoría de teléfonos funciona mejor abriendo la experiencia en pestaña nueva.</p>
+            </div>
+          </div>
+        </div>
+        <div class="tabpanel" role="tabpanel" id="p-video" aria-labelledby="t-video" hidden>
+          <div class="viewer viewer--video">
+            <div class="video-full"><video src="assets/motion/folio-it-demo.mp4" controls playsinline preload="metadata" poster="assets/img/folio-demo-poster.webp"></video></div>
+            <div class="viewer__side">
+              <div class="panel__intro"><h2>Video de la experiencia</h2><p>Si no puedes usar la cámara, mira cómo funciona: el globo, los botones y su contenido.</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="tabpanel" role="tabpanel" id="p-visor-3d" aria-labelledby="t-visor-3d" hidden>
+          <div class="viewer" data-viewer>
+            <div class="viewer__main">
+              <div class="viewer__stage" data-stage>
+                <img src="assets/img/marcador-it.webp" width="709" height="1078" alt="Portada de It, de Stephen King" loading="lazy">
+                <canvas data-canvas aria-hidden="true"></canvas>
+                <video data-vid src="assets/motion/folio-it-chroma.mp4" playsinline preload="none" hidden></video>
+              </div>
+              <div class="fbar">
+                <button data-dlg="d-sin" type="button"><img src="assets/img/folio/icon-sinopsis.png" alt="">Sinopsis</button>
+                <button data-dlg="d-pal" type="button"><img src="assets/img/folio/icon-palabras.png" alt="">Palabras clave</button>
+                <button data-dlg="d-afi" type="button"><img src="assets/img/folio/icon-afinidad.png" alt="">Afinidad</button>
+              </div>
+            </div>
+            <div class="viewer__side">
+              <div class="panel__intro"><h2>Explora sin cámara</h2><p>Mueve el cursor (o el dedo) sobre la portada y abre las tarjetas, igual que en la experiencia AR.</p></div>
+              <p class="panel__p">Toca la portada para repetir el video.</p>
+            </div>
+          </div>
+          <dialog class="dlg" id="d-sin"><div class="dlg__box"><div class="ar-head"><div><p class="ar-eyebrow">IT - Stephen King</p><h1 class="ar-title">Sinopsis</h1></div><form method="dialog"><button class="ar-close" aria-label="Cerrar">×</button></form></div><div class="ar-hero">cada 27 años, el miedo despierta</div><div class="ar-text"><p>En Derry, un pequeño pueblo de Maine, una fuerza maligna despierta cada 27 años para alimentarse del miedo. Cuando una serie de desapariciones comienza a aterrorizar a sus habitantes, siete niños deberán enfrentarse a una presencia capaz de adoptar la forma de sus peores pesadillas. Su nombre es Pennywise, y el verdadero horror apenas comienza.</p></div></div></dialog>
+          <dialog class="dlg" id="d-pal"><div class="dlg__box"><div class="ar-head"><div><p class="ar-eyebrow">Palabras clave</p><h1 class="ar-title">Sin spoilers</h1></div><form method="dialog"><button class="ar-close" aria-label="Cerrar">×</button></form></div><p class="ar-lead">Tres palabras que describen la experiencia de lectura. Ninguna revela la trama.</p><div class="ar-cards"><div class="ar-card"><svg class="ar-star" viewBox="0 0 32 32" fill="#f2733f" aria-hidden="true"><polygon points="16,1 18.5,10 26.6,5.4 22,13.5 31,16 22,18.5 26.6,26.6 18.5,22 16,31 13.5,22 5.4,26.6 10,18.5 1,16 10,13.5 5.4,5.4 13.5,10"/></svg><div><h2>Miedo</h2><p>En Derry, los miedos toman forma y se vuelven imposibles de ignorar.</p></div></div><div class="ar-card"><svg class="ar-star" viewBox="0 0 32 32" fill="#2c4a66" aria-hidden="true"><polygon points="16,1 18.5,10 26.6,5.4 22,13.5 31,16 22,18.5 26.6,26.6 18.5,22 16,31 13.5,22 5.4,26.6 10,18.5 1,16 10,13.5 5.4,5.4 13.5,10"/></svg><div><h2>Amistad</h2><p>El vínculo entre los protagonistas es la única fuerza capaz de enfrentar aquello que parece invencible.</p></div></div><div class="ar-card"><svg class="ar-star" viewBox="0 0 32 32" fill="#9cc5cf" aria-hidden="true"><polygon points="16,1 18.5,10 26.6,5.4 22,13.5 31,16 22,18.5 26.6,26.6 18.5,22 16,31 13.5,22 5.4,26.6 10,18.5 1,16 10,13.5 5.4,5.4 13.5,10"/></svg><div><h2>Memoria</h2><p>Los recuerdos esconden secretos que vuelven cuando menos los esperas.</p></div></div></div></div></dialog>
+          <dialog class="dlg" id="d-afi"><div class="dlg__box"><div class="ar-head"><div><p class="ar-eyebrow">Afinidad</p><h1 class="ar-title">Oscuro y nostálgico</h1></div><form method="dialog"><button class="ar-close" aria-label="Cerrar">×</button></form></div><div class="ar-affinity"><div class="ar-aff-item"><div class="ar-aff-body"><div class="ar-aff-top"><h2 class="ar-aff-name">El instituto</h2><span class="ar-aff-pct">91%</span></div><p class="ar-aff-why">Coincide en: niños en peligro, habilidades extraordinarias y secretos oscuros que deben descubrir.</p><span class="ar-aff-bar"><span class="ar-aff-bar-fill" style="--v:91%"></span></span></div></div><div class="ar-aff-item"><div class="ar-aff-body"><div class="ar-aff-top"><h2 class="ar-aff-name">Stranger Things</h2><span class="ar-aff-pct">82%</span></div><p class="ar-aff-why">Coincide en: amistad, misterios sobrenaturales y pequeños pueblos.</p><span class="ar-aff-bar"><span class="ar-aff-bar-fill" style="--v:82%"></span></span></div></div><div class="ar-aff-item"><div class="ar-aff-body"><div class="ar-aff-top"><h2 class="ar-aff-name">El misterio de Salem's Lot</h2><span class="ar-aff-pct">87%</span></div><p class="ar-aff-why">Coincide en: un pueblo aparentemente tranquilo, sucesos inexplicables y una amenaza sobrenatural que se extiende entre sus habitantes.</p><span class="ar-aff-bar"><span class="ar-aff-bar-fill" style="--v:87%"></span></span></div></div></div></div></dialog>
+        </div>
+      </div>
+    </section>
+
+    <section class="more sec--cream">
+      <div class="container">
+        <h2 class="h-md" data-reveal>Sigue explorando</h2>
+        <div class="more__grid" data-reveal><a class="mcard" href="entrecruzados.html" style="--bg:var(--blue)" data-cursor="Ir"><small>Proyecto</small><b>Entrecruzados<span aria-hidden="true">↗</span></b></a><a class="mcard" href="fotografia.html" style="--bg:var(--navy)" data-cursor="Ir"><small>Sección</small><b>Fotografía deportiva<span aria-hidden="true">↗</span></b></a><a class="mcard" href="motion.html" style="--bg:var(--teal)" data-cursor="Ir"><small>Sección</small><b>Motion Graphics<span aria-hidden="true">↗</span></b></a></div>
+      </div>
+    </section>
+    <section class="sec sec--blue wave-top contact contact--compact" id="contacto">
+      <div class="container">
+        <h2 class="h-xl" data-reveal>Contacto</h2>
+        <p class="lead" data-reveal>Creemos algo que se pueda ver, sentir y recordar.</p>
+        <a class="contact__mail" href="mailto:sofiablaverde05@gmail.com" data-cursor="Escribir" data-reveal>sofiablaverde05@gmail.com</a>
+        <ul class="contact__meta" data-reveal>
+          <li><a href="tel:+573025474966">+57 302 547 4966</a></li>
+          <li>Bogotá, Colombia</li>
+        </ul>
+        <div class="contact__foot">
+          <img src="assets/img/sofi-crema.png" alt="sofi" width="372" height="197" loading="lazy">
+          <p>© <span data-year>2026</span> Sofia · Diseño digital</p>
+          <a class="top-link" href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false" data-cursor="Subir">Volver arriba ↑</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="lb" id="lightbox" role="dialog" aria-modal="true" aria-label="Visor" hidden>
+    <span class="lb__count" aria-hidden="true"></span>
+    <button class="lb__btn lb__close" aria-label="Cerrar" data-cursor="Cerrar">✕</button>
+    <button class="lb__btn lb__prev" aria-label="Anterior" data-cursor="Anterior">←</button>
+    <figure class="lb__fig"><img class="lb__img" alt=""><video class="lb__video" controls playsinline loop hidden></video><figcaption class="lb__cap"></figcaption></figure>
+    <button class="lb__btn lb__next" aria-label="Siguiente" data-cursor="Siguiente">→</button>
+  </div>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

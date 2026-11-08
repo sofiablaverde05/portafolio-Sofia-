@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>421co · Diseño UX/UI · Sofia</title>
+  <meta name="description" content="Diseño de un sitio web responsive para 421 Co., una marca colombiana de café, adaptando su identidad visual a computador y móvil para crear una experiencia">
+  <meta name="theme-color" content="#23499f">
+  <meta property="og:title" content="421co · Diseño UX/UI · Sofia">
+  <meta property="og:description" content="Diseño de un sitio web responsive para 421 Co., una marca colombiana de café, adaptando su identidad visual a computador y móvil para crear una experiencia">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="preload" href="assets/fonts/caacupe-one-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/poppins-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/styles.css">
+  <script>(function(d){d.classList.add('js');try{history.scrollRestoration='manual'}catch(e){}try{if(sessionStorage.getItem('curtain')){d.classList.add('curtain-in');sessionStorage.removeItem('curtain')}}catch(e){}})(document.documentElement);</script>
+</head>
+<body>
+  <a class="skip" href="#contenido-principal">Saltar al contenido</a>
+
+  <div class="curtain" aria-hidden="true"><img src="assets/img/sofi-crema.png" alt="" width="372" height="197"></div>
+  <div class="cursor" aria-hidden="true"><div class="cursor__ring"><span class="cursor__label"></span></div><div class="cursor__dot"></div></div>
+
+  <header class="top">
+    <a class="top__logo" href="index.html" aria-label="Inicio"><img src="assets/img/sofi-azul.png" alt="sofi" width="372" height="197"></a>
+    <nav class="top__nav" aria-label="Principal"><a href="uxui.html" aria-current="page">Diseño UX/UI</a><a href="fotografia.html">Fotografía deportiva</a><a href="motion.html">Motion Graphics</a><a href="inmersiva.html">Experiencia Inmersiva</a><a href="index.html#contacto">Contacto</a></nav>
+    <button class="top__menu" aria-expanded="false" aria-controls="menu"><span>Menú</span><i></i></button>
+  </header>
+  <nav class="menu" id="menu" aria-label="Menú principal">
+    <ul class="menu__list">
+        <li><a href="index.html" style="--i:0"><small>00</small>Inicio</a></li>
+        <li><a href="uxui.html" style="--i:1" aria-current="page"><small>01</small>Diseño UX/UI</a></li>
+        <li><a href="fotografia.html" style="--i:2"><small>02</small>Fotografía deportiva</a></li>
+        <li><a href="motion.html" style="--i:3"><small>03</small>Motion Graphics</a></li>
+        <li><a href="inmersiva.html" style="--i:4"><small>04</small>Experiencia Inmersiva</a></li>
+        <li><a href="index.html#contacto" style="--i:5"><small>05</small>Contacto</a></li>
+        </ul>
+    <div class="menu__foot"><a href="mailto:sofiablaverde05@gmail.com">sofiablaverde05@gmail.com</a><span>Bogotá, Colombia</span></div>
+  </nav>
+
+  <main id="contenido-principal" style="--accent:#33356c">
+    <header class="phero sec--cream">
+      <div class="container">
+        <a class="crumb" href="uxui.html" data-cursor="Volver">← Diseño UX/UI</a>
+        <h1 class="pill" style="--accent:#33356c">421co</h1>
+        <div class="phero__grid">
+          <p class="lead" data-reveal>Diseño de un sitio web responsive para 421 Co., una marca colombiana de café, adaptando su identidad visual a computador y móvil para crear una experiencia digital cercana, dinámica y coherente con su esencia.</p>
+          <div data-reveal><dl class="meta"><dt>Tipo</dt><dd>Sitio web responsive</dd><dt>Herramientas</dt><dd><div class="tools" style="--accent:#33356c"><i class="ico i-figma" role="img" aria-label="figma"></i><i class="ico i-code" role="img" aria-label="code"></i></div></dd></dl></div>
+        </div>
+      </div>
+    </header>
+    <section class="tabs sec--cream" data-tabs style="--accent:#33356c">
+      <div class="container">
+        <div class="tabs__list" role="tablist" aria-label="Proceso del proyecto"><button class="tab" role="tab" id="t-arquitectura" aria-controls="p-arquitectura" data-hash="arquitectura" aria-selected="false" tabindex="-1"><small>01</small>Mapa de arquitectura</button><button class="tab" role="tab" id="t-wireframes" aria-controls="p-wireframes" data-hash="wireframes" aria-selected="false" tabindex="-1"><small>02</small>Wireframes</button><button class="tab" role="tab" id="t-sistema" aria-controls="p-sistema" data-hash="sistema" aria-selected="false" tabindex="-1"><small>03</small>Sistema de diseño</button><button class="tab" role="tab" id="t-final" aria-controls="p-final" data-hash="final" data-default aria-selected="false" tabindex="-1"><small>04</small>Producto final</button></div>
+        <div class="tabpanel" role="tabpanel" id="p-arquitectura" aria-labelledby="t-arquitectura" hidden><div class="panel__intro"><h2>Mapa de arquitectura</h2><p>Estructura del sitio y relación entre páginas.</p></div>
+          <div class="todo-box"><b>Aquí va: el mapa de arquitectura de 421co</b><span>Sube la imagen a <code>assets/proceso/421co/</code> y pega este bloque en <code>421co.html</code> (ver README).</span></div>
+          <!-- <div class="shots"><figure class="shot shot--wide"><img src="assets/proceso/421co/ARCHIVO.webp" alt="DESCRIPCIÓN" width="1600" height="900" loading="lazy"><figcaption>Descripción breve</figcaption></figure></div> -->
+        </div>
+        <div class="tabpanel" role="tabpanel" id="p-wireframes" aria-labelledby="t-wireframes" hidden><div class="panel__intro"><h2>Wireframes</h2><p>Esquemas de las páginas en web y móvil.</p></div>
+          <div class="todo-box"><b>Aquí va: los wireframes de 421co</b><span>Sube la imagen a <code>assets/proceso/421co/</code> y pega este bloque en <code>421co.html</code> (ver README).</span></div>
+          <!-- <div class="shots"><figure class="shot shot--wide"><img src="assets/proceso/421co/ARCHIVO.webp" alt="DESCRIPCIÓN" width="1600" height="900" loading="lazy"><figcaption>Descripción breve</figcaption></figure></div> -->
+        </div>
+        <div class="tabpanel" role="tabpanel" id="p-sistema" aria-labelledby="t-sistema" hidden><div class="panel__intro"><h2>Sistema de diseño</h2><p>Adaptación de la identidad de la marca al entorno digital.</p></div>
+          <div class="todo-box"><b>Aquí va: el sistema de diseño de 421co</b><span>Sube la imagen a <code>assets/proceso/421co/</code> y pega este bloque en <code>421co.html</code> (ver README).</span></div>
+          <!-- <div class="shots"><figure class="shot shot--wide"><img src="assets/proceso/421co/ARCHIVO.webp" alt="DESCRIPCIÓN" width="1600" height="900" loading="lazy"><figcaption>Descripción breve</figcaption></figure></div> -->
+        </div>
+        <div class="tabpanel" role="tabpanel" id="p-final" aria-labelledby="t-final" hidden><div class="panel__intro"><h2>Producto final</h2><p>Prototipos interactivos de la versión web y móvil.</p></div><h3 class="subhead">Versión web</h3>
+          <div class="embed-wrap">
+            <div class="embed " id="emb-421-web">
+              <div class="embed__ph">
+                <img src="assets/img/421-laptop.webp" alt="" width="735" height="444">
+                <b>Prototipo web · 421 Co.</b>
+                <p>Sitio responsive de la marca de café. Navégalo aquí mismo.</p>
+                <button class="btn btn--cream" data-embed="https://www.figma.com/embed?embed_host=share&amp;url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fc0ZNjz8MtR6UPUmFK72dy2%2F421-Co.-website%3Fnode-id%3D186-5979%26p%3Df%26t%3DfdvlXSQT6s6Xq6Gh-1%26scaling%3Dmin-zoom%26content-scaling%3Dfixed%26page-id%3D186%253A5978%26starting-point-node-id%3D186%253A5979" data-title="Prototipo web · 421 Co." data-cursor="Abrir">Abrir prototipo web <span aria-hidden="true">→</span></button>
+              </div>
+            </div>
+            <div class="embed__bar">
+              <span class="note" style="margin:0">Si el prototipo no carga, ábrelo directamente en Figma.</span>
+              <span class="btn-row"><button class="btn btn--ghost" data-fs="emb-421-web">Pantalla completa</button><a class="btn" href="https://www.figma.com/proto/c0ZNjz8MtR6UPUmFK72dy2/421-Co.-website?node-id=186-5979&amp;p=f&amp;t=fdvlXSQT6s6Xq6Gh-1&amp;scaling=min-zoom&amp;content-scaling=fixed&amp;page-id=186%3A5978&amp;starting-point-node-id=186%3A5979" target="_blank" rel="noopener">Abrir en Figma <span aria-hidden="true">↗</span></a></span>
+            </div>
+          </div><div class="web" data-reveal><div class="web__lap" data-tilt><img src="assets/img/421-laptop.webp" alt="Sitio web de 421 Co. en portátil" width="735" height="444" loading="lazy"></div><div class="web__cards"><img src="assets/img/421-cafes.webp" alt="Página de cafés de 421 Co." width="601" height="390" loading="lazy"><img src="assets/img/421-contacto.webp" alt="Página de contacto de 421 Co." width="549" height="356" loading="lazy"><img src="assets/img/421-login.webp" alt="Página de inicio de sesión de 421 Co." width="549" height="356" loading="lazy"><img src="assets/img/421-producto.webp" alt="Página de producto de 421 Co." width="601" height="390" loading="lazy"></div></div><h3 class="subhead" style="margin-top:clamp(40px,6vw,90px)">Versión móvil</h3>
+          <div class="embed-wrap">
+            <div class="embed embed--tall" id="emb-421-movil">
+              <div class="embed__ph">
+                <img src="assets/img/421-m5.webp" alt="" width="386" height="734">
+                <b>Prototipo móvil · 421 Co.</b>
+                <p>Misma identidad adaptada a pantalla de teléfono.</p>
+                <button class="btn btn--cream" data-embed="https://www.figma.com/embed?embed_host=share&amp;url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fc0ZNjz8MtR6UPUmFK72dy2%2F421-Co.-website%3Fnode-id%3D543-8947%26p%3Df%26t%3DmIkHK0VtiC75iDXG-1%26scaling%3Dscale-down%26content-scaling%3Dfixed%26page-id%3D542%253A7070%26starting-point-node-id%3D543%253A8947%26show-proto-sidebar%3D1" data-title="Prototipo móvil · 421 Co." data-cursor="Abrir">Abrir prototipo móvil <span aria-hidden="true">→</span></button>
+              </div>
+            </div>
+            <div class="embed__bar">
+              <span class="note" style="margin:0">Si el prototipo no carga, ábrelo directamente en Figma.</span>
+              <span class="btn-row"><button class="btn btn--ghost" data-fs="emb-421-movil">Pantalla completa</button><a class="btn" href="https://www.figma.com/proto/c0ZNjz8MtR6UPUmFK72dy2/421-Co.-website?node-id=543-8947&amp;p=f&amp;t=mIkHK0VtiC75iDXG-1&amp;scaling=scale-down&amp;content-scaling=fixed&amp;page-id=542%3A7070&amp;starting-point-node-id=543%3A8947&amp;show-proto-sidebar=1" target="_blank" rel="noopener">Abrir en Figma <span aria-hidden="true">↗</span></a></span>
+            </div>
+          </div><div class="phones" data-parallax data-reveal aria-label="Pantallas móviles del sitio de 421 Co."><div class="ph" style="--w:18.3%;--lift:3%" data-depth="0.35"><img src="assets/img/421-m2.webp" alt="Pantalla móvil &#x27;Conéctate con nosotros&#x27; con formulario de contacto" width="319" height="586" loading="lazy"></div><div class="ph" style="--w:20.7%;--lift:0%" data-depth="0.6"><img src="assets/img/421-m3.webp" alt="Pantalla móvil &#x27;Nuestros cafés&#x27; con productos" width="362" height="687" loading="lazy"></div><div class="ph" style="--w:22.1%;--lift:2%" data-depth="0.9"><img src="assets/img/421-m5.webp" alt="Pantalla móvil de inicio: &#x27;Somos los del 421&#x27;" width="386" height="734" loading="lazy"></div><div class="ph" style="--w:20.7%;--lift:0%" data-depth="0.6"><img src="assets/img/421-m4.webp" alt="Pantalla móvil de producto &#x27;Coraje&#x27;, café en fondo amarillo" width="361" height="687" loading="lazy"></div><div class="ph" style="--w:18.3%;--lift:3%" data-depth="0.35"><img src="assets/img/421-m1.webp" alt="Pantalla móvil de inicio de sesión" width="319" height="607" loading="lazy"></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="more sec--cream">
+      <div class="container">
+        <h2 class="h-md" data-reveal>Sigue explorando</h2>
+        <div class="more__grid" data-reveal><a class="mcard" href="atelier.html" style="--bg:var(--slate)" data-cursor="Ir"><small>Siguiente proyecto</small><b>Atelier<span aria-hidden="true">↗</span></b></a><a class="mcard" href="regioo.html" style="--bg:var(--teal)" data-cursor="Ir"><small>Proyecto anterior</small><b>Regioo<span aria-hidden="true">↗</span></b></a><a class="mcard" href="motion.html" style="--bg:var(--blue)" data-cursor="Ir"><small>Sección</small><b>Motion Graphics<span aria-hidden="true">↗</span></b></a></div>
+      </div>
+    </section>
+    <section class="sec sec--blue wave-top contact contact--compact" id="contacto">
+      <div class="container">
+        <h2 class="h-xl" data-reveal>Contacto</h2>
+        <p class="lead" data-reveal>Creemos algo que se pueda ver, sentir y recordar.</p>
+        <a class="contact__mail" href="mailto:sofiablaverde05@gmail.com" data-cursor="Escribir" data-reveal>sofiablaverde05@gmail.com</a>
+        <ul class="contact__meta" data-reveal>
+          <li><a href="tel:+573025474966">+57 302 547 4966</a></li>
+          <li>Bogotá, Colombia</li>
+        </ul>
+        <div class="contact__foot">
+          <img src="assets/img/sofi-crema.png" alt="sofi" width="372" height="197" loading="lazy">
+          <p>© <span data-year>2026</span> Sofia · Diseño digital</p>
+          <a class="top-link" href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false" data-cursor="Subir">Volver arriba ↑</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="lb" id="lightbox" role="dialog" aria-modal="true" aria-label="Visor" hidden>
+    <span class="lb__count" aria-hidden="true"></span>
+    <button class="lb__btn lb__close" aria-label="Cerrar" data-cursor="Cerrar">✕</button>
+    <button class="lb__btn lb__prev" aria-label="Anterior" data-cursor="Anterior">←</button>
+    <figure class="lb__fig"><img class="lb__img" alt=""><video class="lb__video" controls playsinline loop hidden></video><figcaption class="lb__cap"></figcaption></figure>
+    <button class="lb__btn lb__next" aria-label="Siguiente" data-cursor="Siguiente">→</button>
+  </div>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
