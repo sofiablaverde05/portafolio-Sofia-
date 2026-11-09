@@ -344,7 +344,7 @@
     let ld = null;
     if (isEmbed) {
       ld = document.createElement('div'); ld.className = 'embed__loading';
-      ld.innerHTML = '<div class="embed__spin" aria-hidden="true"></div><b>' + (b.dataset.title || 'Prototipo') + '</b><p>Cargando el prototipo… la primera vez puede tardar unos segundos.</p>';
+      ld.innerHTML = '<div class="embed__spin" aria-hidden="true"></div><b>' + (b.dataset.title || 'Prototipo') + '</b><p>Preparando el prototipo… puede tardar unos segundos.</p>';
       ld.setAttribute('role', 'status'); box.appendChild(ld);
     }
     const f = document.createElement('iframe');
@@ -361,10 +361,10 @@
           lock.innerHTML = '<span>Toca para usar el prototipo</span>';
           const ex = document.createElement('button'); ex.type = 'button'; ex.className = 'embed__exit'; ex.textContent = 'Salir del prototipo';
           lock.addEventListener('click', () => box.classList.add('is-active'));
-          ex.addEventListener('click', () => box.classList.remove('is-active'));
+          ex.addEventListener('click', () => { box.classList.remove('is-active'); leaveFs(box); });
           box.append(lock, ex);
         }
-      }, isEmbed ? 1400 : 0);
+      }, isEmbed ? 5000 : 0);
     });
     box.appendChild(f);
     if (!isEmbed) { const st = box.querySelector('.embed__ph p'); if (st) st.textContent = 'Cargando…'; }
@@ -375,8 +375,24 @@
     const fs = e.target.closest('[data-fs]');
     if (fs) {
       const t = document.getElementById(fs.dataset.fs);
-      if (t && t.requestFullscreen) t.requestFullscreen().catch(() => {});
+      if (!t) return;
+      const lb = t.querySelector('[data-embed]'); if (lb) loadEmbed(lb);
+      const fallback = () => { t.classList.add('is-fs', 'is-active'); document.documentElement.style.overflow = 'hidden'; };
+      if (t.requestFullscreen) t.requestFullscreen().then(() => t.classList.add('is-active')).catch(fallback); else fallback();
     }
+  });
+  function leaveFs(t) {
+    if (document.fullscreenElement && document.exitFullscreen) document.exitFullscreen().catch(() => {});
+    t.classList.remove('is-fs'); document.documentElement.style.overflow = '';
+  }
+  document.addEventListener('fullscreenchange', () => {
+    if (!document.fullscreenElement) $$('.embed.is-fs').forEach(t => leaveFs(t));
+  });
+  addEventListener('keydown', e => { if (e.key === 'Escape') $$('.embed.is-fs').forEach(leaveFs); });
+  // mensaje de Figma (si se usa client-id) para quitar la pantalla de carga antes
+  addEventListener('message', e => {
+    if (e.origin !== 'https://www.figma.com' || !e.data || e.data.type !== 'INITIAL_LOAD') return;
+    $$('.embed iframe').forEach(f => { if (f.contentWindow === e.source) f.closest('.embed').classList.add('is-ready'); });
   });
   // escritorio: precargar el prototipo cuando se acerca a la pantalla
   if (!coarse && 'IntersectionObserver' in window) {

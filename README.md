@@ -41,3 +41,9 @@ Azul `#23499f` · Navy `#33356c` · Crema `#f1e1c8` · Teal `#097987` · Slate `
 - Hero de escritorio sin logo, PORTAFOLIO centrado en la banda crema.
 - Prototipos: pantalla de carga (spinner), precarga en escritorio al acercarse, bloqueo táctil en móvil ("Toca para usar el prototipo" / "Salir del prototipo"), cursor propio oculto sobre el prototipo, variante teléfono sin marco.
 - Móvil: cubierta bajo las pestañas, vuelve al inicio de la sección al cambiar de pestaña, listas en tarjetas con borde.
+
+## Ajustes v4.1
+- Hero escritorio: onda a 100svh (sin deformarse en pantallas anchas), mota del icono Ae eliminada.
+- Tarjetas del home vuelven a entrar con el scroll; figuras apoyadas sobre el borde.
+- Carga de prototipos: overlay se mantiene 5 s tras el load (Figma pinta blanco un rato).
+- Móvil: 'Salir del prototipo' también sale de pantalla completa (con respaldo si el navegador no la soporta).
