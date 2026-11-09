@@ -33,3 +33,11 @@ Azul `#23499f` · Navy `#33356c` · Crema `#f1e1c8` · Teal `#097987` · Slate `
 - **Poses de Sofia** (`assets/img/pose-*.webp`): `caminando` jala las secciones del home; `cadera` (UX/UI), `brazos` (Inmersiva) y `lentes` (Fotografía) en las introducciones. Disponibles sin usar: bolsillos, salto, sentada, recostada, leyendo, barbilla, rodillas, sentada2, mano-cabeza, sentada3.
 - Hover de las filas: cambio de color rápido, sin relleno de abajo hacia arriba.
 - Pestañas de UX/UI en móvil: barra con deslizamiento táctil, ubicada bajo el botón de menú.
+
+## Cambios v4
+- Home: tarjetas con la figura sentada/recostada encima (sin personaje caminando).
+- Folio · It: solo pestañas "En vivo" y "Sin cámara".
+- Logo del footer lleva al inicio; favicon = sofi azul.
+- Hero de escritorio sin logo, PORTAFOLIO centrado en la banda crema.
+- Prototipos: pantalla de carga (spinner), precarga en escritorio al acercarse, bloqueo táctil en móvil ("Toca para usar el prototipo" / "Salir del prototipo"), cursor propio oculto sobre el prototipo, variante teléfono sin marco.
+- Móvil: cubierta bajo las pestañas, vuelve al inicio de la sección al cambiar de pestaña, listas en tarjetas con borde.

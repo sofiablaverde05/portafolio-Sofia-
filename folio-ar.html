@@ -9,6 +9,8 @@
   <meta property="og:title" content="Folio · It · Experiencia Inmersiva · Sofia">
   <meta property="og:description" content="Experiencia de realidad aumentada creada para Folio a partir de «It». Reconoce una imagen con la cámara y superpone contenido en 3D sobre ella.">
   <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://www.figma.com" crossorigin>
+  <link rel="dns-prefetch" href="https://www.figma.com">
   <link rel="icon" href="favicon.png" type="image/png">
   <link rel="preload" href="assets/fonts/caacupe-one-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/poppins-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
@@ -51,7 +53,7 @@
     </header>
     <section class="tabs sec--cream" data-tabs style="--accent:#33356c">
       <div class="container">
-        <div class="tabs__list" role="tablist" aria-label="Proceso del proyecto"><button class="tab" role="tab" id="t-vivo" aria-controls="p-vivo" data-hash="vivo" data-default aria-selected="false" tabindex="-1"><small>01</small>En vivo</button><button class="tab" role="tab" id="t-video" aria-controls="p-video" data-hash="video" aria-selected="false" tabindex="-1"><small>02</small>Video</button><button class="tab" role="tab" id="t-visor-3d" aria-controls="p-visor-3d" data-hash="visor-3d" aria-selected="false" tabindex="-1"><small>03</small>Sin cámara</button></div>
+        <div class="tabs__list" role="tablist" aria-label="Proceso del proyecto"><button class="tab" role="tab" id="t-vivo" aria-controls="p-vivo" data-hash="vivo" data-default aria-selected="false" tabindex="-1"><small>01</small>En vivo</button><button class="tab" role="tab" id="t-visor-3d" aria-controls="p-visor-3d" data-hash="visor-3d" aria-selected="false" tabindex="-1"><small>02</small>Sin cámara</button></div>
         <div class="tabpanel" role="tabpanel" id="p-vivo" aria-labelledby="t-vivo" hidden><div class="panel__intro"><h2>Pruébala aquí</h2><p>Experiencia interactiva dentro de la página.</p></div>
           <div class="ar">
             <div class="ar__frame" id="ar-frame">
@@ -74,14 +76,6 @@
               </div>
               <p class="btn-row"><a class="btn btn--ghost" href="https://folio-it.vercel.app/" target="_blank" rel="noopener">Abrir en pestaña nueva <span aria-hidden="true">↗</span></a></p>
               <p class="note">La cámara necesita permiso del navegador. En la mayoría de teléfonos funciona mejor abriendo la experiencia en pestaña nueva.</p>
-            </div>
-          </div>
-        </div>
-        <div class="tabpanel" role="tabpanel" id="p-video" aria-labelledby="t-video" hidden>
-          <div class="viewer viewer--video">
-            <div class="video-full"><video src="assets/motion/folio-it-demo.mp4" controls playsinline preload="metadata" poster="assets/img/folio-demo-poster.webp"></video></div>
-            <div class="viewer__side">
-              <div class="panel__intro"><h2>Video de la experiencia</h2><p>Si no puedes usar la cámara, mira cómo funciona: el globo, los botones y su contenido.</p></div>
             </div>
           </div>
         </div>
@@ -127,7 +121,7 @@
           <li>Bogotá, Colombia</li>
         </ul>
         <div class="contact__foot">
-          <img src="assets/img/sofi-crema.png" alt="sofi" width="372" height="197" loading="lazy">
+          <a href="index.html" class="contact__logo" aria-label="Ir al inicio" data-cursor="Inicio"><img src="assets/img/sofi-crema.png" alt="sofi" width="372" height="197" loading="lazy"></a>
           <p>© <span data-year>2026</span> Sofia · Diseño digital</p>
           <a class="top-link" href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false" data-cursor="Subir">Volver arriba ↑</a>
         </div>

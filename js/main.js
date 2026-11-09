@@ -299,7 +299,11 @@
   /* ---------- pestañas ---------- */
   $$('[data-tabs]').forEach(box => {
     const tabs = $$('[role=tab]', box), panels = tabs.map(t => document.getElementById(t.getAttribute('aria-controls')));
-    const select = (i, focus, hash = true) => {
+    const list = $('.tabs__list', box);
+    const cover = document.createElement('div'); cover.className = 'tabs__cover'; box.appendChild(cover);
+    const stuck = () => cover.classList.toggle('is-on', innerWidth <= 900 && list.getBoundingClientRect().top <= 66 && list.getBoundingClientRect().top >= 60);
+    addEventListener('scroll', stuck, { passive: true }); addEventListener('resize', stuck);
+    const select = (i, focus, hash = true, user = false) => {
       tabs.forEach((t, k) => {
         t.setAttribute('aria-selected', k === i); t.tabIndex = k === i ? 0 : -1;
         panels[k].hidden = k !== i;
@@ -307,10 +311,15 @@
       if (focus) tabs[i].focus();
       tabs[i].scrollIntoView({ block: 'nearest', inline: 'center', behavior: reduce ? 'auto' : 'smooth' });
       if (hash && tabs[i].dataset.hash) history.replaceState(null, '', '#' + tabs[i].dataset.hash);
+      if (user) {
+        const off = (innerWidth <= 900 ? 64 : 0) + (list ? list.offsetHeight : 0) + 8;
+        const top = panels[i].getBoundingClientRect().top + scrollY - off;
+        if (scrollY > top) scrollTo({ top: Math.max(0, top), behavior: 'auto' });
+      }
       panels[i].dispatchEvent(new CustomEvent('tabshow', { bubbles: true }));
     };
     tabs.forEach((t, i) => {
-      t.addEventListener('click', () => select(i));
+      t.addEventListener('click', () => select(i, false, true, true));
       t.addEventListener('keydown', e => {
         const k = { ArrowRight: i + 1, ArrowLeft: i - 1, Home: 0, End: tabs.length - 1 }[e.key];
         if (k === undefined) return;
@@ -326,29 +335,60 @@
     });
   });
 
-  /* ---------- prototipos incrustados (se cargan al pulsar) ---------- */
+  /* ---------- prototipos incrustados ---------- */
+  const coarse = matchMedia('(hover:none),(pointer:coarse)').matches;
+  function loadEmbed(b) {
+    const box = b.closest('.embed, .ar__frame');
+    if (!box || box.querySelector('iframe')) return;
+    const isEmbed = box.classList.contains('embed');
+    let ld = null;
+    if (isEmbed) {
+      ld = document.createElement('div'); ld.className = 'embed__loading';
+      ld.innerHTML = '<div class="embed__spin" aria-hidden="true"></div><b>' + (b.dataset.title || 'Prototipo') + '</b><p>Cargando el prototipo… la primera vez puede tardar unos segundos.</p>';
+      ld.setAttribute('role', 'status'); box.appendChild(ld);
+    }
+    const f = document.createElement('iframe');
+    f.src = b.dataset.embed;
+    f.title = b.dataset.title || 'Contenido interactivo';
+    f.allow = b.dataset.allow || 'fullscreen; clipboard-write';
+    f.setAttribute('allowfullscreen', '');
+    f.addEventListener('load', () => {
+      box.classList.add('is-loaded');
+      setTimeout(() => {
+        box.classList.add('is-ready');
+        if (isEmbed && coarse) {
+          const lock = document.createElement('button'); lock.type = 'button'; lock.className = 'embed__lock';
+          lock.innerHTML = '<span>Toca para usar el prototipo</span>';
+          const ex = document.createElement('button'); ex.type = 'button'; ex.className = 'embed__exit'; ex.textContent = 'Salir del prototipo';
+          lock.addEventListener('click', () => box.classList.add('is-active'));
+          ex.addEventListener('click', () => box.classList.remove('is-active'));
+          box.append(lock, ex);
+        }
+      }, isEmbed ? 1400 : 0);
+    });
+    box.appendChild(f);
+    if (!isEmbed) { const st = box.querySelector('.embed__ph p'); if (st) st.textContent = 'Cargando…'; }
+  }
   document.addEventListener('click', e => {
     const b = e.target.closest('[data-embed]');
-    if (b) {
-      const box = b.closest('.embed, .ar__frame');
-      if (box.querySelector('iframe')) return;
-      const f = document.createElement('iframe');
-      f.src = b.dataset.embed;
-      f.title = b.dataset.title || 'Contenido interactivo';
-      f.loading = 'lazy';
-      f.allow = b.dataset.allow || 'fullscreen; clipboard-write';
-      f.setAttribute('allowfullscreen', '');
-      f.addEventListener('load', () => box.classList.add('is-loaded'));
-      box.appendChild(f);
-      const st = box.querySelector('.embed__ph p');
-      if (st) st.textContent = 'Cargando…';
-      return;
-    }
+    if (b) { loadEmbed(b); return; }
     const fs = e.target.closest('[data-fs]');
     if (fs) {
       const t = document.getElementById(fs.dataset.fs);
       if (t && t.requestFullscreen) t.requestFullscreen().catch(() => {});
     }
+  });
+  // escritorio: precargar el prototipo cuando se acerca a la pantalla
+  if (!coarse && 'IntersectionObserver' in window) {
+    const eio = new IntersectionObserver(es => es.forEach(en => {
+      if (en.isIntersecting) { eio.unobserve(en.target); const b = en.target.querySelector('[data-embed]'); if (b) loadEmbed(b); }
+    }), { rootMargin: '500px 0px' });
+    $$('.embed').forEach(el => eio.observe(el));
+  }
+  // el cursor personalizado se oculta sobre el prototipo (el mouse sigue funcionando)
+  $$('.embed').forEach(el => {
+    el.addEventListener('mouseenter', () => root.classList.add('no-cursor'));
+    el.addEventListener('mouseleave', () => root.classList.remove('no-cursor'));
   });
 
   /* ---------- visor (fotos y videos) ---------- */
