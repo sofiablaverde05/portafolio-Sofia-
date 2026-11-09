@@ -47,3 +47,22 @@ Azul `#23499f` · Navy `#33356c` · Crema `#f1e1c8` · Teal `#097987` · Slate `
 - Tarjetas del home vuelven a entrar con el scroll; figuras apoyadas sobre el borde.
 - Carga de prototipos: overlay se mantiene 5 s tras el load (Figma pinta blanco un rato).
 - Móvil: 'Salir del prototipo' también sale de pantalla completa (con respaldo si el navegador no la soporta).
+
+## v4.2
+- Regioo · Sistema de diseño: 5 láminas + 4 pares claro/oscuro (WebP sin pérdida, 11–91 KB c/u), visor con zoom (clic en la imagen).
+- 421co · Mapa de arquitectura (WebP, 59 KB). Wireframes y sistema de diseño de 421co: pendientes.
+- Motion: videos `ojos.mp4` (100 KB) y `darkside.mp4` (325 KB), H.264 720p sin audio.
+
+## v4.3
+- 421 Co. · pestaña Wireframes: 8 wireframes web descargados de Figma (Home, Nosotros, Productos, Comunidad, Eventos, Noticias, Contacto, Pasarela de pago). Miniaturas WebP (10–24 KB) en la página y archivo completo WebP sin pérdida (25–110 KB) que se carga solo al ampliar. Archivos en `assets/proceso/421co/wf/`.
+
+## v4.4
+- Entrecruzados completado con los dos PDF de Cruz Roja: pestañas Problemática, Bocetos y planos, Recorrido (10 paradas, propuesta 3D + foto real), Señalética y zonas, Videojuegos y piezas, Resultados finales (galería, esperado vs obtenido, conclusiones). Imágenes en `assets/proceso/entre/` (WebP).
+- Motion: se quitó el pictograma de baños; «It» usa el video de realidad aumentada de Folio (`assets/motion/it-ar.mp4`); Renegados y DVSPORT quedan como imagen hasta tener su motion; nueva ilustración «Cada día llega una carta» (`assets/img/mg-carta.webp`) sin el texto.
+
+## v4.5
+- Regioo · Mapa de arquitectura (HTML, desde las pantallas del prototipo) y 421 Co. · Sistema de diseño (paleta, tipografía Rubik y componentes recortados del prototipo, `assets/proceso/421co/ds/`, fuente en `assets/fonts/rubik-*`).
+- Entrecruzados: se quitaron «Señalética y zonas» y «Videojuegos y piezas»; recorrido rediseñado en 10 tarjetas cortas (foto real + recuadro 3D); galería sin las evidencias 8, 11, 13, 14, 15 y 16, con foto del gachapón.
+
+## v4.6
+- Regioo: la pestaña «Mapa de arquitectura» vuelve a quedar pendiente. 421 Co.: el sistema de diseño solo conserva color y tipografía. Entrecruzados: se quitó otra foto de la galería.
