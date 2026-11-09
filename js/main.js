@@ -413,7 +413,9 @@
     const img = $('.lb__img', lb), vid = $('.lb__video', lb), cap = $('.lb__cap', lb), cnt = $('.lb__count', lb);
     const bPrev = $('.lb__prev', lb), bNext = $('.lb__next', lb), bClose = $('.lb__close', lb);
     let list = [], idx = 0, opener = null;
+    img.addEventListener('click', () => lb.classList.toggle('is-zoom'));
     const show = i => {
+      lb.classList.remove('is-zoom');
       idx = (i + list.length) % list.length;
       const it = list[idx];
       vid.pause(); vid.removeAttribute('src'); vid.load();
