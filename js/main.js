@@ -502,7 +502,7 @@
       const v = e.target;
       if (e.isIntersecting) {
         if (!v.src && v.dataset.src) { v.src = v.dataset.src; }
-        if (playing.size >= 4) return;
+        if (playing.size >= 8) return;
         v.play().then(() => { v.classList.add('is-on'); playing.add(v); }).catch(() => {});
       } else {
         v.pause(); playing.delete(v);

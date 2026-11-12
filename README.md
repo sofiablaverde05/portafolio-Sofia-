@@ -76,3 +76,16 @@ Azul `#23499f` · Navy `#33356c` · Crema `#f1e1c8` · Teal `#097987` · Slate `
 
 ## v4.9
 - Entrecruzados · Resultados finales: vuelve «Resultados obtenidos» (sin «esperados» ni «conclusiones»).
+
+## v5.0
+- Regioo: se quitó la pestaña Wireframes; el Mapa de arquitectura es ahora un mapa mental (assets/proceso/regioo/arquitectura.webp) hecho a partir del prototipo.
+- Atelier: solo queda «Producto final» (la barra de pestañas se oculta al haber una sola).
+- Motion: «Cada día llega una carta» y «DVSPORT» ahora son video (assets/motion/mg-carta.mp4, dvsport.mp4); Renegados bajó de lugar.
+
+## v5.1
+- Fotografía deportiva: nuevo orden (1, 3, 6, 2, 4, 5, 7).
+- Regioo: el mapa de arquitectura pasó a mapa conceptual (estilo del de 421co); «Onboarding» → «Cuestionario»; Inicio/registro y Centro de ayuda sin ramas.
+- Motion: Darkside primero; la carta queda sobre DVSPORT.
+
+## v5.2
+- Motion: los 5 videos se reproducen en bucle a la vez (antes el límite era 4); al ampliar una pieza ya no aparece pie de texto.
