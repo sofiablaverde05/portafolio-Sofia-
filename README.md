@@ -89,3 +89,6 @@ Azul `#23499f` · Navy `#33356c` · Crema `#f1e1c8` · Teal `#097987` · Slate `
 
 ## v5.2
 - Motion: los 5 videos se reproducen en bucle a la vez (antes el límite era 4); al ampliar una pieza ya no aparece pie de texto.
+
+## v5.3
+- Fotografía deportiva: la cuadrícula ahora se lee por filas (las 3 primeras fotos arriba, las siguientes 3 debajo…), igual que el orden del móvil.
