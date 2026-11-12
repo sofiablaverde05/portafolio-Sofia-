@@ -717,3 +717,9 @@ body.is-ready .scroll-cue{opacity:.9}
 
 /* v4.7 motion de sección: en móvil se ve completo (recorte 4:3) */
 @media (max-width:700px){.shero--full .shero__box{height:auto;aspect-ratio:4/3}}
+
+/* v5.3 · Fotografía deportiva: orden de lectura por filas (igual que en móvil) */
+.photos .masonry{columns:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(12px,1.8vw,26px);align-items:start}
+.photos .masonry .tile{margin-bottom:0}
+@media (max-width:980px){.photos .masonry{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.photos .masonry{grid-template-columns:1fr}}
