@@ -714,3 +714,6 @@ body.is-ready .scroll-cue{opacity:.9}
 .rt__n{position:absolute;left:10px;top:10px;width:38px;height:38px;border-radius:50%;background:#23499f;color:#fff;display:grid;place-items:center;font:400 20px var(--f-display);pointer-events:none}
 .rt h3{font:400 clamp(20px,2vw,26px)/1.1 var(--f-display);color:var(--navy);margin:12px 0 4px}.rt p{margin:0;font-size:14.5px;line-height:1.5}
 @media (max-width:700px){.rts{grid-template-columns:1fr}}
+
+/* v4.7 motion de sección: en móvil se ve completo (recorte 4:3) */
+@media (max-width:700px){.shero--full .shero__box{height:auto;aspect-ratio:4/3}}

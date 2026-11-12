@@ -66,3 +66,13 @@ Azul `#23499f` · Navy `#33356c` · Crema `#f1e1c8` · Teal `#097987` · Slate `
 
 ## v4.6
 - Regioo: la pestaña «Mapa de arquitectura» vuelve a quedar pendiente. 421 Co.: el sistema de diseño solo conserva color y tipografía. Entrecruzados: se quitó otra foto de la galería.
+
+## v4.7
+- Motion Graphics: video de cabecera `assets/motion/seccion-motion.mp4` (1920×1080, 30 fps, H.264 sin audio). Se reproduce una vez y queda en el último fotograma (sin bucle); con «reducir movimiento» se muestra directamente el último fotograma. En móvil se ve en recuadro 4:3 para que el título no se corte.
+
+## v4.8
+- Experiencia Inmersiva: Folio · It primero, luego Entrecruzados. Entrecruzados: se quitó «A quién le hablamos» (persona y journey), y «Lo esperado y lo obtenido» y «Conclusiones» de Resultados finales.
+- Prototipos de Figma: la pantalla de carga ahora espera ~14 s tras cargar el iframe (antes 5 s). Para que espere exactamente hasta que el prototipo esté listo, poner un client-id de Figma en `FIGMA_CLIENT_ID` (build.py); entonces se usa el aviso INITIAL_LOAD de Figma (con tope de 40 s).
+
+## v4.9
+- Entrecruzados · Resultados finales: vuelve «Resultados obtenidos» (sin «esperados» ni «conclusiones»).

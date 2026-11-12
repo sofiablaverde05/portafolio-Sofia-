@@ -194,11 +194,14 @@
 
   /* ---------- motion de cabecera de sección ---------- */
   $$('.shero video').forEach(v => {
-    v.muted = true; v.loop = true; v.playsInline = true;
+    v.muted = true; v.loop = false; v.playsInline = true;
+    /* se reproduce una sola vez y se queda congelado en el último fotograma */
     v.addEventListener('loadeddata', () => {
       v.closest('.shero').classList.add('is-on');
-      if (!reduce) v.play().catch(() => {});
+      if (reduce) { v.currentTime = Math.max(0, v.duration - 0.05); return; }
+      v.play().catch(() => {});
     });
+    v.addEventListener('ended', () => { v.pause(); });
   });
 
   /* ---------- bucle principal ---------- */
@@ -352,19 +355,29 @@
     f.title = b.dataset.title || 'Contenido interactivo';
     f.allow = b.dataset.allow || 'fullscreen; clipboard-write';
     f.setAttribute('allowfullscreen', '');
+    /* La pantalla de carga se queda hasta que el prototipo avise que está listo.
+       Con client-id de Figma el aviso es exacto (INITIAL_LOAD); sin él, se espera un tiempo largo de seguridad. */
+    const hasId = /client-id=/.test(b.dataset.embed || '');
+    let done = false;
+    const markReady = () => {
+      if (done) return; done = true;
+      box.classList.add('is-ready');
+      if (isEmbed && coarse) {
+        const lock = document.createElement('button'); lock.type = 'button'; lock.className = 'embed__lock';
+        lock.innerHTML = '<span>Toca para usar el prototipo</span>';
+        const ex = document.createElement('button'); ex.type = 'button'; ex.className = 'embed__exit'; ex.textContent = 'Salir del prototipo';
+        lock.addEventListener('click', () => box.classList.add('is-active'));
+        ex.addEventListener('click', () => { box.classList.remove('is-active'); leaveFs(box); });
+        box.append(lock, ex);
+      }
+    };
+    box._ready = markReady;
     f.addEventListener('load', () => {
       box.classList.add('is-loaded');
-      setTimeout(() => {
-        box.classList.add('is-ready');
-        if (isEmbed && coarse) {
-          const lock = document.createElement('button'); lock.type = 'button'; lock.className = 'embed__lock';
-          lock.innerHTML = '<span>Toca para usar el prototipo</span>';
-          const ex = document.createElement('button'); ex.type = 'button'; ex.className = 'embed__exit'; ex.textContent = 'Salir del prototipo';
-          lock.addEventListener('click', () => box.classList.add('is-active'));
-          ex.addEventListener('click', () => { box.classList.remove('is-active'); leaveFs(box); });
-          box.append(lock, ex);
-        }
-      }, isEmbed ? 5000 : 0);
+      if (!isEmbed) { markReady(); return; }
+      const msg = ld && ld.querySelector('p');
+      setTimeout(() => { if (!done && msg) msg.textContent = 'Casi listo… un momento más.'; }, 7000);
+      setTimeout(markReady, hasId ? 40000 : 14000);
     });
     box.appendChild(f);
     if (!isEmbed) { const st = box.querySelector('.embed__ph p'); if (st) st.textContent = 'Cargando…'; }
@@ -392,7 +405,7 @@
   // mensaje de Figma (si se usa client-id) para quitar la pantalla de carga antes
   addEventListener('message', e => {
     if (e.origin !== 'https://www.figma.com' || !e.data || e.data.type !== 'INITIAL_LOAD') return;
-    $$('.embed iframe').forEach(f => { if (f.contentWindow === e.source) f.closest('.embed').classList.add('is-ready'); });
+    $$('.embed iframe').forEach(f => { if (f.contentWindow === e.source) { const bx = f.closest('.embed'); setTimeout(() => bx._ready && bx._ready(), 600); } });
   });
   // escritorio: precargar el prototipo cuando se acerca a la pantalla
   if (!coarse && 'IntersectionObserver' in window) {
