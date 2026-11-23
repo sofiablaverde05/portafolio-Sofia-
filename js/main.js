@@ -55,7 +55,8 @@
   /* ---------- pantalla de carga (solo inicio, primera visita) ---------- */
   const loader = $('#loader');
   function ready() { body.classList.remove('is-loading'); body.classList.add('is-ready'); }
-  if (loader) {
+  if (loader && root.classList.contains('no-loader')) { loader.remove(); ready(); }
+  else if (loader) {
     const fill = $('.loader__fill', loader);
     const count = $('.loader__count b', loader);
     const imgs = $$('img').filter(i => !i.closest('.loader') && i.loading !== 'lazy');
@@ -564,4 +565,17 @@
     const rx = e => { const r = stage.getBoundingClientRect(), x = (e.clientX - r.left) / r.width - .5, y = (e.clientY - r.top) / r.height - .5; stage.style.transform = `perspective(900px) rotateY(${(x * 16).toFixed(1)}deg) rotateX(${(-y * 16).toFixed(1)}deg)`; };
     root.addEventListener('pointermove', rx); root.addEventListener('pointerleave', () => stage.style.transform = '');
   }
+})();
+
+
+/* v6.5 · video del recorrido de Entrecruzados: sin sonido, se reproduce una sola vez al verse (sin bucle) */
+(() => {
+  const v = document.querySelector('.ecres__vid video');
+  if (!v) return;
+  v.muted = true; v.loop = false; v.playsInline = true;
+  let done = false;
+  v.addEventListener('ended', () => { done = true; });
+  new IntersectionObserver(es => es.forEach(e => {
+    if (e.isIntersecting) { if (v.paused && !done) v.play().catch(() => {}); } else if (!v.ended) v.pause();
+  }), { threshold: .35 }).observe(v);
 })();

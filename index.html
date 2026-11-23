@@ -16,6 +16,7 @@
   <link rel="preload" href="assets/fonts/poppins-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/styles.css">
   <script>(function(d){d.classList.add('js');try{history.scrollRestoration='manual'}catch(e){}try{if(sessionStorage.getItem('curtain')){d.classList.add('curtain-in');sessionStorage.removeItem('curtain')}}catch(e){}})(document.documentElement);</script>
+<script>try{var seen=0;try{seen=sessionStorage.getItem("sofi-seen")}catch(e){}var r=document.referrer;if(seen||(r&&new URL(r).origin===location.origin))document.documentElement.classList.add("no-loader");try{sessionStorage.setItem("sofi-seen","1")}catch(e){}}catch(e){}</script>
 </head>
 <body class="is-loading">
   <a class="skip" href="#contenido-principal">Saltar al contenido</a>
@@ -98,7 +99,7 @@
             <li><i class="ico i-davinci" role="img" aria-label="DaVinci Resolve"></i></li>
             <li><i class="ico i-ps" role="img" aria-label="Adobe Photoshop"></i></li>
             <li><i class="ico i-ae" role="img" aria-label="Adobe After Effects"></i></li></ul></div>
-          <div><h3 class="h-md">Contacto</h3><ul class="plain"><li><a href="mailto:sofiablaverde05@gmail.com">sofiablaverde05@gmail.com</a></li><li>Bogotá, Colombia</li></ul></div>
+          <div><h3 class="h-md">Contacto</h3><ul class="plain"><li><svg class="ci" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6.5A1.5 1.5 0 0 1 4.5 5h15A1.5 1.5 0 0 1 21 6.5v11a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 17.5z"/><path d="m3.5 7 8.5 6.5L20.5 7"/></svg><a href="mailto:sofiablaverde05@gmail.com">sofiablaverde05@gmail.com</a></li><li>Bogotá, Colombia</li></ul></div>
         </div>
       </div>
     </section>
@@ -156,10 +157,11 @@
       <div class="container">
         <h2 class="h-xl" data-reveal>Contacto</h2>
         <p class="lead" data-reveal>Creemos algo que se pueda ver, sentir y recordar.</p>
-        <a class="contact__mail" href="mailto:sofiablaverde05@gmail.com" data-cursor="Escribir" data-reveal>sofiablaverde05@gmail.com</a>
-        <ul class="contact__meta" data-reveal>
-          <li><a href="tel:+573025474966">+57 302 547 4966</a></li>
-          <li>Bogotá, Colombia</li>
+        <ul class="contact__list" data-reveal>
+          <li><svg class="ci" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6.5A1.5 1.5 0 0 1 4.5 5h15A1.5 1.5 0 0 1 21 6.5v11a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 17.5z"/><path d="m3.5 7 8.5 6.5L20.5 7"/></svg><a href="mailto:sofiablaverde05@gmail.com" data-cursor="Escribir">sofiablaverde05@gmail.com</a></li>
+          <li><svg class="ci" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a1.5 1.5 0 0 1-1.5 1.5A15.5 15.5 0 0 1 3.5 5.5 1.5 1.5 0 0 1 5 4z"/></svg><a href="tel:+573025474966" data-cursor="Llamar">+57 302 547 4966</a></li>
+          <li><svg class="ci" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10.5V16M8 7.8v.1M12 16v-5.5M12 13c0-1.7 1-2.5 2.3-2.5S16.5 11.3 16.5 13v3"/></svg><a href="https://www.linkedin.com/in/sofia-buitrago-laverde-144000360" target="_blank" rel="noopener" data-cursor="LinkedIn">LinkedIn · Sofía Buitrago Laverde</a></li>
+          <li class="contact__city">Bogotá, Colombia</li>
         </ul>
         <div class="contact__foot">
           <a href="index.html" class="contact__logo" aria-label="Ir al inicio" data-cursor="Inicio"><img src="assets/img/sofi-crema.png" alt="sofi" width="372" height="197" loading="lazy"></a>

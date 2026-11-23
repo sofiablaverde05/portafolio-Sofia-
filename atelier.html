@@ -53,9 +53,9 @@
     </header>
     <section class="tabs sec--cream" data-tabs style="--accent:#264653">
       <div class="container">
-        <div class="tabs__list" role="tablist" aria-label="Proceso del proyecto" hidden><button class="tab" role="tab" id="t-final" aria-controls="p-final" data-hash="final" data-default aria-selected="false" tabindex="-1"><small>01</small>Producto final</button></div>
-        <div class="tabpanel" role="tabpanel" id="p-final" aria-labelledby="t-final" hidden><div class="panel__intro"><h2>Producto final</h2><p>Prototipo interactivo y vistas finales.</p></div>
-          <div class="embed-wrap">
+        <div class="tabs__list" role="tablist" aria-label="Proceso del proyecto"><button class="tab" role="tab" id="t-mockups" aria-controls="p-mockups" data-hash="mockups" aria-selected="false" tabindex="-1"><small>01</small>Mockups</button><button class="tab" role="tab" id="t-final" aria-controls="p-final" data-hash="final" data-default aria-selected="false" tabindex="-1"><small>02</small>Producto final</button></div>
+        <div class="tabpanel" role="tabpanel" id="p-mockups" aria-labelledby="t-mockups" hidden><div class="panel__intro"><h2>Mockups</h2><p>Cómo se ve Atelier en portátil.</p></div><div class="laps" data-parallax data-reveal><div class="lap lap--l" data-depth="0.4"><div data-tilt><img src="assets/img/atelier-1.webp" alt="Atelier en portátil: perfil del artesano Carmen Julia Alméciga" width="524" height="320" loading="lazy"></div></div><div class="lap lap--c" data-depth="0.8"><div data-tilt><img src="assets/img/atelier-3.webp" alt="Atelier en portátil: estilos de artesanías con filtros y fotografías" width="725" height="443" loading="lazy"></div></div><div class="lap lap--r" data-depth="0.4"><div data-tilt><img src="assets/img/atelier-2.webp" alt="Atelier en portátil: página &#x27;Nuestra historia&#x27;" width="524" height="320" loading="lazy"></div></div></div></div>
+        <div class="tabpanel" role="tabpanel" id="p-final" aria-labelledby="t-final" hidden><div class="panel__intro"><h2>Producto final</h2><p>Prototipo interactivo de la plataforma.</p></div><div class="embed-wrap">
             <div class="embed " id="emb-atelier">
               <div class="embed__ph">
                 <img src="assets/img/atelier-3.webp" alt="" width="725" height="443">
@@ -65,11 +65,10 @@
               </div>
             </div>
             <div class="embed__bar">
-              <span class="note" style="margin:0">Si el prototipo no carga, ábrelo directamente en Figma.</span>
+              <div class="embed__txt"><p>Interactúa con el prototipo de Atelier directamente aquí.</p><p>Si el prototipo no carga, ábrelo directamente en Figma.</p></div>
               <span class="btn-row"><button class="btn btn--ghost" data-fs="emb-atelier">Pantalla completa</button><a class="btn" href="https://www.figma.com/proto/jKwlxR6WLCwvjaS6GkrrrX/Atelier?node-id=762-2125&amp;t=7Mfkrvu0d1CjXMVB-1&amp;scaling=scale-down-width&amp;content-scaling=fixed&amp;page-id=762%3A2048&amp;starting-point-node-id=814%3A1479" target="_blank" rel="noopener">Abrir en Figma <span aria-hidden="true">↗</span></a></span>
             </div>
-          </div><div class="laps" data-parallax data-reveal><div class="lap lap--l" data-depth="0.4"><div data-tilt><img src="assets/img/atelier-1.webp" alt="Atelier en portátil: perfil del artesano Carmen Julia Alméciga" width="524" height="320" loading="lazy"></div></div><div class="lap lap--c" data-depth="0.8"><div data-tilt><img src="assets/img/atelier-3.webp" alt="Atelier en portátil: estilos de artesanías con filtros y fotografías" width="725" height="443" loading="lazy"></div></div><div class="lap lap--r" data-depth="0.4"><div data-tilt><img src="assets/img/atelier-2.webp" alt="Atelier en portátil: página &#x27;Nuestra historia&#x27;" width="524" height="320" loading="lazy"></div></div></div>
-        </div>
+          </div></div>
       </div>
     </section>
 
@@ -83,10 +82,11 @@
       <div class="container">
         <h2 class="h-xl" data-reveal>Contacto</h2>
         <p class="lead" data-reveal>Creemos algo que se pueda ver, sentir y recordar.</p>
-        <a class="contact__mail" href="mailto:sofiablaverde05@gmail.com" data-cursor="Escribir" data-reveal>sofiablaverde05@gmail.com</a>
-        <ul class="contact__meta" data-reveal>
-          <li><a href="tel:+573025474966">+57 302 547 4966</a></li>
-          <li>Bogotá, Colombia</li>
+        <ul class="contact__list" data-reveal>
+          <li><svg class="ci" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6.5A1.5 1.5 0 0 1 4.5 5h15A1.5 1.5 0 0 1 21 6.5v11a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 17.5z"/><path d="m3.5 7 8.5 6.5L20.5 7"/></svg><a href="mailto:sofiablaverde05@gmail.com" data-cursor="Escribir">sofiablaverde05@gmail.com</a></li>
+          <li><svg class="ci" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a1.5 1.5 0 0 1-1.5 1.5A15.5 15.5 0 0 1 3.5 5.5 1.5 1.5 0 0 1 5 4z"/></svg><a href="tel:+573025474966" data-cursor="Llamar">+57 302 547 4966</a></li>
+          <li><svg class="ci" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10.5V16M8 7.8v.1M12 16v-5.5M12 13c0-1.7 1-2.5 2.3-2.5S16.5 11.3 16.5 13v3"/></svg><a href="https://www.linkedin.com/in/sofia-buitrago-laverde-144000360" target="_blank" rel="noopener" data-cursor="LinkedIn">LinkedIn · Sofía Buitrago Laverde</a></li>
+          <li class="contact__city">Bogotá, Colombia</li>
         </ul>
         <div class="contact__foot">
           <a href="index.html" class="contact__logo" aria-label="Ir al inicio" data-cursor="Inicio"><img src="assets/img/sofi-crema.png" alt="sofi" width="372" height="197" loading="lazy"></a>
